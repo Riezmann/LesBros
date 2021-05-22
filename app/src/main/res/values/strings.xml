@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calendar Database First Draft</string>
+    <string name="AddWorkSession">Add Work Session</string>
+    <string name="AddDate">Add Date</string>
+    <string name="AddTag">Add Tag</string>
+    <string name="endTime">End Time</string>
+    <string name="startTime">Start Time</string>
+    <string name="eventName">Event Name</string>
+    <string name="view_all">View All</string>
+    <string name="add">Add</string>
+</resources>

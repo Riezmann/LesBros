@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calendar Database First Draft</string>
+    <string name="app_name">LesBros Calendar</string>
     <string name="AddWorkSession">Add Work Session</string>
     <string name="AddDate">Add Date</string>
     <string name="AddTag">Add Tag</string>

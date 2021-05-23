@@ -2,6 +2,7 @@ package com.example.calendardatabasefirstdraft;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class LateDatabaseChange extends Activity {
     @Override
@@ -12,7 +13,7 @@ public class LateDatabaseChange extends Activity {
         //Change Database with everything we have
         //What is going on here?
         //We did it
-
+        Toast.makeText(this, "Try to do it on time! Good Luck!", Toast.LENGTH_SHORT).show();
         DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
 
         WorkingSession workingSession = databaseHelper.getWorkingSession(getIntent().getIntExtra("ID", 0));

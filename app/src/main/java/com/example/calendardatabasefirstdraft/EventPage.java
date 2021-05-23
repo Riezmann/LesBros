@@ -99,7 +99,7 @@ public class EventPage extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (((String) parent.getItemAtPosition(position)).equals("Choose Category")) {
-                    //temporarily do nothing
+                    Toast.makeText(EventPage.this, "Please choose the right tag!", Toast.LENGTH_SHORT).show();
                 }
                 tagName = (String) parent.getItemAtPosition(position);
             }
@@ -139,7 +139,7 @@ public class EventPage extends AppCompatActivity {
                     weekOrder = calendar.get(Calendar.WEEK_OF_YEAR);
                     weekID = (int) databaseHelper.addWeek(weekOrder);
                     weekCalendar = databaseHelper.getWeek(weekID);
-                    Toast.makeText(EventPage.this, "Success: " + weekID, Toast.LENGTH_SHORT).show();
+
 
 
                     //Creating Date Object
@@ -167,13 +167,15 @@ public class EventPage extends AppCompatActivity {
                     databaseHelper.addDWI((int) dateID, (int) workingSessionID, workingSession.isStatus());
 
 
+                    Toast.makeText(getApplicationContext(), "Add Working Session Successfully!", Toast.LENGTH_SHORT).show();
+
                     SimpleDateFormat format3 = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.UK);
                     String startTemp = selectedDate;
 
                     startTemp = startTemp + " " + startTime.getText();
 
                     date = format3.parse(startTemp);
-                    Toast.makeText(getApplicationContext(), date.toString(), Toast.LENGTH_SHORT).show();
+
 
                     //Reminder at Start Time
                     Intent intent = new Intent(getApplicationContext(), StartTimeReminderBroadcast.class);

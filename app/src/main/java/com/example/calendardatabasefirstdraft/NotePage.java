@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -50,8 +51,9 @@ public class NotePage extends AppCompatActivity {
             public void onClick(View v) {
                 Note note = new Note(date_in.toString(), noteContent.getText().toString());
                 databaseHelper.addNote(date_in.getText().toString(), noteContent.getText().toString());
+                Toast.makeText(NotePage.this, "Added Note Successfully", Toast.LENGTH_SHORT).show();
                 ShowNoteOnListView(databaseHelper);
-
+                
             }
         });
 

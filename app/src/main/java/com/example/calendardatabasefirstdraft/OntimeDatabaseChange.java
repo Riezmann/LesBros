@@ -10,7 +10,7 @@ public class OntimeDatabaseChange extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toast.makeText(this, "This is created with " + getIntent().getIntExtra("ID",0), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Congratulations!", Toast.LENGTH_SHORT).show();
 
         //Change Database with everything we have
         //What is going on here?

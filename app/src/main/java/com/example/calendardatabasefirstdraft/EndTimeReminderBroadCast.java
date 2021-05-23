@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.provider.Settings;
-import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -23,7 +22,6 @@ public class EndTimeReminderBroadCast extends BroadcastReceiver {
 
         int workingSessionID = intent.getIntExtra("ID", 0);
 
-        Toast.makeText(context, "EndTime Working Session ID: " + workingSessionID, Toast.LENGTH_SHORT).show();
 
         Intent intent1 = new Intent(context, OntimeDatabaseChange.class);
         intent1.putExtra("ID", workingSessionID);

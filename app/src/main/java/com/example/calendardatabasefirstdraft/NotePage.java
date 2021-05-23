@@ -53,7 +53,7 @@ public class NotePage extends AppCompatActivity {
                 databaseHelper.addNote(date_in.getText().toString(), noteContent.getText().toString());
                 Toast.makeText(NotePage.this, "Added Note Successfully", Toast.LENGTH_SHORT).show();
                 ShowNoteOnListView(databaseHelper);
-                
+
             }
         });
 

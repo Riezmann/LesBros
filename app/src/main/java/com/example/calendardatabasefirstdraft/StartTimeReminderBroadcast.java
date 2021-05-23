@@ -29,7 +29,7 @@ public class StartTimeReminderBroadcast extends BroadcastReceiver {
 
         PendingIntent actionIntent1 = PendingIntent.getActivity(context, 0, intent1, 0);
 
-        PendingIntent actionIntent2 = PendingIntent.getActivity(context, 0, intent2, 0);
+        PendingIntent actionIntent2 = PendingIntent.getActivity(context, 0, new Intent(), 0);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "lesBros")
                 .setSmallIcon(R.drawable.ic__add_alert_black_24dp)
